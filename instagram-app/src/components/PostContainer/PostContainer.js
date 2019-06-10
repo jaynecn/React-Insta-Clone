@@ -14,7 +14,7 @@ function PostContainer(props) {
               <img src={profile.thumbnailUrl} alt={profile.name}/>
               <h3>{profile.username}</h3>
             </div>
-            <div>
+            <div className="main-image">
               <img src={profile.imageUrl} alt={profile.id}/>
             </div>
             <div className="comment-section">

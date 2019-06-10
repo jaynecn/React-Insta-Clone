@@ -15,6 +15,11 @@ function CommentSection(props) {
           </div>
         ))
       }
+      <form className="comment-form">
+        <input defaultValue="add comment"
+        />
+        <button className="add-comment" >Add Comment</button>
+      </form>
     </div>
     );
 

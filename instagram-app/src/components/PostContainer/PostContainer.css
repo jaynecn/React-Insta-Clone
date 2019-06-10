@@ -1,12 +1,10 @@
 .post-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   padding: 10px;
   width: 650px;
-
-  border: 2px solid purple;
 }
 
 .post-container img {
@@ -30,7 +28,9 @@
   margin: 10px;
 }
 
+
 .post-box {
+  width: 600px;
   border: 1px solid rgb(235, 233, 233);
 
 }

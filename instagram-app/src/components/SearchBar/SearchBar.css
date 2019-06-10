@@ -1,0 +1,18 @@
+
+.search-form {
+  width: 600px;
+  border: 2px solid green;
+}
+
+#form {
+  width: 200px;
+  border: 2px solid green;
+}
+
+.search-bar form {
+  width: 100px;
+}
+
+.search-bar input {
+  width: 150px;
+}
