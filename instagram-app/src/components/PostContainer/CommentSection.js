@@ -8,7 +8,10 @@ function CommentSection(props) {
       {
         props.comments.map(profile => (
           <div key={profile.id}>
-            <p><strong>{profile.username}</strong></p><p>{profile.text}</p>
+            <div className="comments-div">
+              <p><strong>{profile.username}</strong></p>
+              <p>{profile.text}</p>
+            </div>
           </div>
         ))
       }

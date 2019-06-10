@@ -1,0 +1,21 @@
+
+.comments {
+  width: 600px;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.comments-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.comments-div p {
+  padding-right: 6px;
+}

@@ -9,7 +9,7 @@ function PostContainer(props) {
     <div className="post-container">
       {
         props.profile.map(profile => (
-          <div key={profile.id}>
+          <div key={profile.id} className="post-box">
             <div className="header">
               <img src={profile.thumbnailUrl} alt={profile.name}/>
               <h3>{profile.username}</h3>
@@ -17,7 +17,7 @@ function PostContainer(props) {
             <div>
               <img src={profile.imageUrl} alt={profile.id}/>
             </div>
-            <div>
+            <div className="comment-section">
               <CommentSection
               comments={profile.comments} />
             </div>
