@@ -1,13 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import SearchBar from './components/SearchBar';
+import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer/PostContainer.js';
 
-function App() {
-  return (
-    <div className="App">
-      test
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      profile: dummyData
+    };
+  }
+  
+  render() {
+    console.log(this.state.profile);
+    return (
+      <div className="App">
+        <PostContainer profile={this.state.profile}/>
+        <div>
+          test
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
