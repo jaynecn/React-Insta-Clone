@@ -1,7 +1,16 @@
 .post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 10px;
+  width: 650px;
 
   border: 2px solid purple;
+}
+
+.post-container img {
+  width: 600px;
 }
 
 .header {
@@ -17,6 +26,7 @@
 }
 
 .header img {
-  width: 50px;
-  padding: 10px 10px 10px 0px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 10px;
 }

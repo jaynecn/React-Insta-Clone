@@ -4,6 +4,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
 
+
 class App extends React.Component {
   constructor() {
     super();
@@ -17,9 +18,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <PostContainer profile={this.state.profile}/>
-        <div>
-          test
-        </div>
       </div>
     );
   }
