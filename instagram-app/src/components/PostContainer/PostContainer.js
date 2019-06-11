@@ -29,7 +29,9 @@ function PostContainer(props) {
       </div>
             <div className="comment-section">
               <CommentSection
-              comments={profile.comments} />
+              comments={profile.comments}
+              addcomment={profile.addComment}
+              changehandler={profile.changeHandler}/>
             </div>
           </div>
         ))

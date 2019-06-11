@@ -9,8 +9,31 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      profile: dummyData
+      profile: dummyData,
+      comment: '',
     };
+  }
+
+  changeHandler= (info) => {
+    this.setState({
+      comment: info.target.value
+    });
+  }
+
+  addComment = (event) => {
+    event.preventDefault();
+
+    const newComment = {
+      id: Date.now(),
+      username: "instaN00b",
+      text: this.state.comment
+    };
+
+    this.setState({
+      profile: 
+      this.state.profile.concat(newComment),
+      comment: '',
+    });
   }
   
   render() {
@@ -18,7 +41,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer profile={this.state.profile}/>
+        <PostContainer 
+        profile={this.state.profile}
+        addcomment={this.addComment}
+        changehandler={this.changeHandler}/>
       </div>
     );
   }
