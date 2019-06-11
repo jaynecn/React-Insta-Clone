@@ -1,5 +1,6 @@
 import React from 'react';
 import './CommentSection.css';
+import PropTypes from 'prop-types';
 
 function CommentSection(props) {
   console.log(props);
@@ -16,13 +17,23 @@ function CommentSection(props) {
         ))
       }
       <form className="comment-form">
-        <input defaultValue="add comment"
+        <input defaultValue="comment"
         />
         <button className="add-comment" >Add Comment</button>
       </form>
     </div>
     );
 
+}
+
+CommentSection.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      username: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired
+    })
+  )
 }
 
 export default CommentSection;
