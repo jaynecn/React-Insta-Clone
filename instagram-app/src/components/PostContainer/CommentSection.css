@@ -36,8 +36,8 @@
 }
 
 .add-comment {
-  background: paleturquoise;
-  color: black;
+  background: rgb(153, 14, 14);
+  color: rgb(202, 188, 188);
   border-radius: 2px;
   margin: 5px;
 }
