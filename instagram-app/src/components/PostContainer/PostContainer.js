@@ -18,6 +18,15 @@ function PostContainer(props) {
             <div className="main-image">
               <img src={profile.imageUrl} alt={profile.id}/>
             </div>
+            <div className="likes">
+              <div>
+                <img src="https://bit.ly/2I8lPKU" alt="heart"/>
+                <img src="https://bit.ly/2R7F5LO" alt="comment"/>
+              </div>
+              <div>
+              <p><strong>{profile.likes} likes</strong></p>
+              </div>
+      </div>
             <div className="comment-section">
               <CommentSection
               comments={profile.comments} />
@@ -37,7 +46,8 @@ PostContainer.propTypes = {
       thumbnailUrl: PropTypes.string.isRequired,
       username: PropTypes.string.isRequired,
       imageUrl: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired
+      id: PropTypes.string.isRequired,
+      likes: PropTypes.number.isRequired
     })
   )
 }

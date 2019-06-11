@@ -7,7 +7,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   line-height: 5px;
-  margin: 10px;
+  margin: 5px 10px 5px 10px;
 }
 
 .comments-div {
@@ -18,12 +18,21 @@
   text-align: left;
 }
 
+.comments img {
+  width: 20px;
+  margin-right: 10px;
+}
+
 .comments-div p {
   padding-right: 6px;
 }
 
 .comment-form {
-  padding: 5px 0 5px 0;
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .add-comment {
@@ -34,6 +43,7 @@
 }
 
 .comment-form input {
+  width: 520px;
   color: gray;
   padding-right: 1px;
 }

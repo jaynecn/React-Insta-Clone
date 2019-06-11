@@ -6,6 +6,11 @@ function CommentSection(props) {
   console.log(props);
   return (
     <div className="comments">
+      {/* <div>
+        <img src="https://bit.ly/2I8lPKU"/>
+        <img src="https://bit.ly/2R7F5LO"/>
+        <p><strong>{profile.likes} likes</strong></p>
+      </div> */}
       {
         props.comments.map(profile => (
           <div key={profile.id}>
@@ -16,11 +21,13 @@ function CommentSection(props) {
           </div>
         ))
       }
-      <form className="comment-form">
+      <div className="comment-form">
+        <form className="form">
         <input defaultValue="comment"
         />
-        <button className="add-comment" >Add Comment</button>
-      </form>
+        <button className="add-comment" >Enter</button>
+        </form>
+      </div>
     </div>
     );
 
