@@ -1,7 +1,11 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 630px;
-  border: 2px solid blue;
+  width: 750px;
+  border: 1px solid rgb(215, 215, 230);
 }
 
 

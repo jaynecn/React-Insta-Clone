@@ -25,7 +25,7 @@ function PostContainer(props) {
               </div>
               <div>
               <p><strong>{profile.likes} likes</strong></p>
-              </div>
+            </div>
       </div>
             <div className="comment-section">
               <CommentSection
