@@ -26,7 +26,7 @@ class App extends React.Component {
     const newComment = {
       id: Date.now(),
       username: "instaN00b",
-      text: this.state.comment
+      text: event.target.comment.value
     };
 
     this.setState({
