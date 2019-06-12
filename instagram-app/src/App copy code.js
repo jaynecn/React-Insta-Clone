@@ -1,11 +1,10 @@
-import React from 'react';
-import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer.js';
-import Login from './components/Login/Login';
-import withAuthentication from './components/Authentication/withAuthentication';
-import ContentPage from './components/ContentPage';
+// import React from 'react';
+// import './App.css';
+// import SearchBar from './components/SearchBar/SearchBar';
+// import dummyData from './dummy-data';
+// import PostContainer from './components/PostContainer/PostContainer.js';
+// import Login from './components/Login/Login';
+// import withAuthentication from './components/Authentication/withAuthentication';
 
 
 class App extends React.Component {
@@ -64,7 +63,6 @@ class App extends React.Component {
         addcomment={this.addComment}
         changehandler={this.changeHandler}
         clicktoincrease={this.clickToIncrease}/>
-        <ContentPage />
       </div>
     );
   }
@@ -72,4 +70,4 @@ class App extends React.Component {
 
 
 
-export default withAuthentication(App);
+// export default withAuthentication(App);
