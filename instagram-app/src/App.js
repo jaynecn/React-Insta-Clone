@@ -15,10 +15,16 @@ class App extends React.Component {
   }
 
   clickToIncrease = (event, id) => {
-    console.log('clickToIncrease activated on ', id);
-    return (
-      this.state.profile.likes + 1
-    );
+    const currentProfile = this.state.profile
+      .map((profile) => {
+       if(profile.id === id) {
+        profile.likes = profile.likes + 1
+        return profile;
+       }
+       return profile
+      })
+
+    this.setState({profile: currentProfile})
   }
 
   changeHandler = (info) => {
@@ -50,7 +56,6 @@ class App extends React.Component {
         <SearchBar />
         <PostContainer 
         profile={this.state.profile}
-        // comment={this.state.profile.comments.text}
         comments={this.state.profile.comments}
         addcomment={this.addComment}
         changehandler={this.changeHandler}

@@ -20,9 +20,9 @@ function PostContainer(props) {
             </div>
             <div className="likes">
               <div>
-                <div className="heart"
-                onClick={(event) => props.clicktoincrease(event, profile.id)}><img src="https://bit.ly/2I8lPKU" alt="heart"/></div>
-                <div><img src="https://bit.ly/2R7F5LO" alt="comment"/></div>
+                <img src="https://bit.ly/2I8lPKU" alt="heart"className="heart"
+                onClick={(event) => props.clicktoincrease(event, profile.id)}/>
+                <img src="https://bit.ly/2R7F5LO" alt="comment"/>
                 </div>
               <div>
               <p><strong>{profile.likes} likes</strong></p>
