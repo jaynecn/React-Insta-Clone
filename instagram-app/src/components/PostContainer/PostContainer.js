@@ -20,18 +20,21 @@ function PostContainer(props) {
             </div>
             <div className="likes">
               <div>
-                <img src="https://bit.ly/2I8lPKU" alt="heart"/>
-                <img src="https://bit.ly/2R7F5LO" alt="comment"/>
-              </div>
+                <div className="heart"
+                onClick={(event) => props.clicktoincrease(event, profile.id)}><img src="https://bit.ly/2I8lPKU" alt="heart"/></div>
+                <div><img src="https://bit.ly/2R7F5LO" alt="comment"/></div>
+                </div>
               <div>
               <p><strong>{profile.likes} likes</strong></p>
+              </div>
             </div>
-      </div>
             <div className="comment-section">
               <CommentSection
+              comment={profile.comments.text}
               comments={profile.comments}
               addcomment={profile.addComment}
-              changehandler={profile.changeHandler}/>
+              changehandler={profile.changeHandler}
+              clicktoincrease={profile.clickToIncrease}/>
             </div>
           </div>
         ))
@@ -53,5 +56,6 @@ PostContainer.propTypes = {
     })
   )
 }
+
 
 export default PostContainer;

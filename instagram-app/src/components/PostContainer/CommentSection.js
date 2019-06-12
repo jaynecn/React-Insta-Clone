@@ -18,8 +18,8 @@ function CommentSection(props) {
       }
       <div className="comment-form">
         <form onSubmit={props.addComment}>
-          <input value={props.comment}
-            onChange={props.changeHandler}defaultValue="comment"
+          <input value={props.comments.text}
+            onChange={props.changehandler}
             type="text"
           />
         <button className="add-comment" onClick={props.addComment}>Enter</button>

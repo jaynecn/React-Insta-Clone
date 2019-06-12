@@ -14,7 +14,14 @@ class App extends React.Component {
     };
   }
 
-  changeHandler= (info) => {
+  clickToIncrease = (event, id) => {
+    console.log('clickToIncrease activated on ', id);
+    return (
+      this.state.profile.likes + 1
+    );
+  }
+
+  changeHandler = (info) => {
     this.setState({
       comment: info.target.value
     });
@@ -26,12 +33,12 @@ class App extends React.Component {
     const newComment = {
       id: Date.now(),
       username: "instaN00b",
-      text: event.target.comment.value
+      text: this.state.comment
     };
 
     this.setState({
       profile: 
-      this.state.profile.concat(newComment),
+      this.state.profile.comments.concat(newComment),
       comment: '',
     });
   }
@@ -43,11 +50,16 @@ class App extends React.Component {
         <SearchBar />
         <PostContainer 
         profile={this.state.profile}
+        // comment={this.state.profile.comments.text}
+        comments={this.state.profile.comments}
         addcomment={this.addComment}
-        changehandler={this.changeHandler}/>
+        changehandler={this.changeHandler}
+        clicktoincrease={this.clickToIncrease}/>
       </div>
     );
   }
 }
+
+
 
 export default App;
