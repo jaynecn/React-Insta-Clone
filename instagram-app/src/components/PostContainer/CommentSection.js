@@ -17,9 +17,10 @@ function CommentSection(props) {
         ))
       }
       <div className="comment-form">
-        <form onSubmit={props.addComment}>
-          <input value={props.comments.text}
+        <form onSubmit={(event) => props.addfunction(event, props.id)}>
+          <input value={props.commenttext}
             onChange={props.changehandler}
+            // onChange={(event) => props.changehandler(event)}
             type="text"
           />
         <button className="add-comment" onClick={props.addComment}>Enter</button>

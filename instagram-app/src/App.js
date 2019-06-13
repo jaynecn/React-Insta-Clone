@@ -5,7 +5,7 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer.js';
 import Login from './components/Login/Login';
 import withAuthentication from './components/Authentication/withAuthentication';
-import ContentPage from './components/ContentPage';
+// import ContentPage from './components/ContentPage';
 
 
 class App extends React.Component {
@@ -30,13 +30,13 @@ class App extends React.Component {
     this.setState({profile: currentProfile})
   }
 
-  changeHandler = (info) => {
+  changeHandler = (event) => {
     this.setState({
-      comment: info.target.value
+      comment: event.target.value
     });
   }
 
-  addComment = (event) => {
+  addComment = (event, id) => {
     event.preventDefault();
 
     const newComment = {
@@ -45,11 +45,17 @@ class App extends React.Component {
       text: this.state.comment
     };
 
-    this.setState({
-      profile: 
-      this.state.profile.comments.concat(newComment),
-      comment: '',
-    });
+    const currentProfile = this.state.profile
+      .map((profile) => {
+       if(profile.id === id) {
+         console.log(profile.id);
+        profile.comments.push(newComment);
+        return profile;
+       }
+       return profile
+      })
+
+    this.setState({profile: currentProfile, comment: ''})
   }
   
   render() {
@@ -61,10 +67,12 @@ class App extends React.Component {
         <PostContainer 
         profile={this.state.profile}
         comments={this.state.profile.comments}
-        addcomment={this.addComment}
+        commenttext={this.state.comment}
+        addfunction={this.addComment}
+        addComment={this.addComment}
         changehandler={this.changeHandler}
         clicktoincrease={this.clickToIncrease}/>
-        <ContentPage />
+        {/* <ContentPage /> */}
       </div>
     );
   }

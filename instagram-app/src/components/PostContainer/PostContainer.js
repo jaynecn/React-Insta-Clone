@@ -30,10 +30,12 @@ function PostContainer(props) {
             </div>
             <div className="comment-section">
               <CommentSection
-              comment={profile.comments.text}
               comments={profile.comments}
-              addcomment={profile.addComment}
-              changehandler={profile.changeHandler}
+              id={profile.id}
+              commenttext={props.commenttext}
+              addfunction={props.addComment}
+              addcomment={props.addComment}
+              changehandler={props.changehandler}
               clicktoincrease={profile.clickToIncrease}/>
             </div>
           </div>
