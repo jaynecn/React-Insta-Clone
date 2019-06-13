@@ -1,0 +1,38 @@
+.search-bar {
+  width: 750px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgb(238, 236, 236);
+  border-radius: 5px;
+}
+
+#insta {
+  width: 25px;
+  padding: 10px;
+}
+
+#logo {
+  width: 100px;
+  padding: 0px 10px;
+}
+
+.search-bar input {
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  width: 150px;
+}
+
+.search-form {
+  width: 200px;
+}
+.corner-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.corner-icons img {
+  width: 20px;
+  padding: 10px;
+}
